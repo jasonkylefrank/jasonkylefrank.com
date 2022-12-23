@@ -1,10 +1,15 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  line-height: 1.5;
+}
+
+.main p {
+  margin-bottom: 2rem;
 }
 
 .description {
@@ -97,16 +102,17 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
 }
 
-.logo,
-.thirteen {
+.logo {
   position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 6px 12px rgb(0 0 0 / 35%);
 }
 
 .thirteen {
@@ -125,7 +131,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
