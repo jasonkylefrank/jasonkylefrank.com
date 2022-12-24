@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Poppins } from "@next/font/google";
+import headshot from "/public/assets/Headshot-2017.png";
 import styles from "../styles/Home.module.css";
-import Button from "components/fake-button";
 
 // TODO: Consider finding a variable-weight font so I don't need to specify the weights
 const poppins = Poppins({
@@ -25,8 +25,9 @@ export default function Home() {
           <div className={styles.center}>
             <Image
               className={styles.logo}
-              src="/assets/Headshot-2017.png"
+              src={headshot}
               alt="Jason K. Frank"
+              placeholder="blur"
               width={132}
               height={132}
               priority
