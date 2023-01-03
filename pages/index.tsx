@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Poppins } from "@next/font/google";
 import headshot from "/public/assets/Headshot-2017.png";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 // TODO: Consider finding a variable-weight font so I don't need to specify the weights
 const poppins = Poppins({
@@ -43,9 +44,21 @@ export default function Home() {
             </p>
             <p>
               {`I've previously hosted sites on Firebase hosting and Netlify. But
-              I think I'll try hosting it on Vercel this time.`}
+              I'll trying-out Vercel for hosting this time.`}
             </p>
             <p>Check back soon to see it grow!</p>
+            <div
+              className="separator"
+              style={{
+                borderTop: "1px solid rgba(0,0,0,0.14)",
+                margin: "36px 48px",
+              }}
+            ></div>
+            <p>
+              Oh, and if you'd like to download my <strong>resume</strong> (as
+              of 2022), click &nbsp;
+              <Link href="resume-2022.pdf">here</Link>.
+            </p>
           </div>
         </div>
       </main>
