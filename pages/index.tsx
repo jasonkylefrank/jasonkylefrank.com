@@ -55,8 +55,10 @@ export default function Home() {
               }}
             ></div>
             <p>
-              Oh, and if you'd like to download my <strong>resume</strong> (as
-              of 2022), click &nbsp;
+              {`Oh, and if you'd like to download my `}
+              <strong>resume</strong>{" "}
+              {`(as
+              of 2022), click `}
               <Link href="resume-2022.pdf">here</Link>.
             </p>
           </div>
