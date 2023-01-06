@@ -56,7 +56,7 @@ export default function Home() {
             ></div>
             <p>
               {`Oh, and if you'd like to download my `}
-              <strong>resume</strong>
+              <strong className="font-medium">resume</strong>
               {`, click `}
               <Link href="resume-2022.pdf">here</Link>
               {` (last updated 12/2022).`}
