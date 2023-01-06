@@ -16,7 +16,7 @@ function TailwindTest() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
         repellat sapiente quos!
       </p>
-      <p className="mb-4">
+      <p className="mb-4 font-medium">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores facere
         consectetur ducimus, perferendis iste cupiditate veniam eos est
         accusamus aliquam repellendus ad! Quis eius illo odit voluptatum sint,
