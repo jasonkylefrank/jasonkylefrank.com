@@ -34,7 +34,7 @@ export default function Home() {
               priority
             />
           </div>
-          <div style={{ maxWidth: 360, textAlign: "center" }}>
+          <div style={{ maxWidth: 460, textAlign: "center" }}>
             <p style={{ fontSize: "1.5rem" }}>Hello!</p>
             <p>This is a brand-new website...</p>
             <p>
@@ -56,10 +56,10 @@ export default function Home() {
             ></div>
             <p>
               {`Oh, and if you'd like to download my `}
-              <strong>resume</strong>{" "}
-              {`(as
-              of 2022), click `}
-              <Link href="resume-2022.pdf">here</Link>.
+              <strong>resume</strong>
+              {`, click `}
+              <Link href="resume-2022.pdf">here</Link>
+              {` (last updated 12/2022).`}
             </p>
           </div>
         </div>
