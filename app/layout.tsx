@@ -17,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(poppins.className, "h-full")}>
       <head />
-      {/* <body className="grid h-full grid-rows-[56px_minmax(500px,_1fr)_56px]"> */}
+      {/* The 'auto' setting for the middle row allows it to take up all remaining space while
+          also not collapsing any smaller than that row's content (in this case the <main>
+          element is that 'auto' row) */}
       <body className="grid h-full grid-rows-[56px_auto_56px]">
         <nav className="opacity-0">This is a nav</nav>
 
