@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function AboutPage() {
   return (
-    <div className="items-start">
+    <div>
       <h2>Hello again!</h2>
       <div className="h-5" />
       <p>
