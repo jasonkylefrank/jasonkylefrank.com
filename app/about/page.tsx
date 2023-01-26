@@ -6,22 +6,24 @@ function AboutPage() {
       <h2>Hello again!</h2>
       <div className="h-5" />
       <p>
-        I'm a <strong>front-end software engineer</strong> and{" "}
-        <strong>UI/UX designer</strong>.
+        {`I'm a `}
+        <strong>{`front-end software engineer`}</strong>
+        {` and `}
+        <strong>{`UI/UX designer`}</strong>.
       </p>
       <p>
-        I love creating software that is beautiful, innovative, and a joy to
-        use.
+        {`I love creating software that is beautiful, innovative, and a joy to
+        use.`}
       </p>
       <p>
-        I'm also a father, husband, athlete, coach, and follower of Christ.
+        {`I'm also a father, husband, athlete, coach, and follower of Christ.
         Perhaps most of all, I'm a work in progress. Always evolving, always
-        growing.
+        growing.`}
       </p>
       <div className="h-5" />
       <p>
-        On this page, I'll expand on this question of who I am by describing /
-        providing things like:
+        {`On this page, I'll expand on this question of who I am by describing /
+        providing things like: `}
       </p>
 
       <ul>
@@ -46,8 +48,7 @@ function AboutPage() {
           <span className="italic text-gray-400"> (forthcoming)</span>
         </li>
       </ul>
-      {/* <div className="my-16 mx-auto h-5 w-1/2 border-b-[1px] border-gray-300" /> */}
-      <div className="my-16 h-5" />
+      <div className="my-16 h-6" />
       <h3>About this site</h3>
       <p>
         {`This is a brand-new site that I'm building up from scratch. So I don't

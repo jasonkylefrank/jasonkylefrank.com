@@ -34,6 +34,7 @@ function AppBar() {
           key="Home"
         />
         <NavLink children="About" href="/about" key="About" />
+        <NavLink children="Contact" href="/contact" key="Contact" />
       </span>
     </nav>
   );
