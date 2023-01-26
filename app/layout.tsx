@@ -21,18 +21,18 @@ export default function RootLayout({
       {/* The 'auto' setting for the middle row allows it to take up all remaining space while
           also not collapsing any smaller than that row's content (in this case the <main>
           element is that 'auto' row) */}
-      <body className="grid h-full grid-rows-[56px_auto_56px]">
+      <body className="grid h-full grid-rows-[56px_auto_56px] justify-items-center">
         <AppBar />
 
         <main
-          className="prose grid max-w-none place-items-center p-5 pb-24
+          className="prose m-6 mt-12 mb-28 grid place-items-center
                    text-gray-900 prose-a:text-blue-600 prose-a:no-underline
-                     md:prose-lg md:p-6 md:pb-24 lg:p-8 lg:pb-24"
+                     md:m-7 md:mb-32 md:prose-lg lg:m-8 lg:mb-36"
         >
           {children}
         </main>
 
-        <footer className="grid place-items-center border-t border-black/10 bg-gray-100 px-4 text-xs opacity-70 sm:text-sm">
+        <footer className="grid w-screen place-items-center border-t border-black/10 bg-gray-100 px-4 text-xs opacity-70 sm:text-sm">
           <p className="text-center">
             Custom-built with
             <svg

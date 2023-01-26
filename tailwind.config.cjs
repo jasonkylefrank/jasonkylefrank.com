@@ -16,6 +16,9 @@ module.exports = {
       colors: {
         gray: colors.neutral,
       },
+      maxWidth: {
+        "8xl": "88rem", // 1408px with a 16px base
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
