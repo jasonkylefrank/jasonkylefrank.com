@@ -11,22 +11,29 @@ function AppBar() {
 
   return (
     <nav className="not-prose grid w-screen grid-flow-col items-center justify-between justify-items-center py-3 px-8">
-      <Image
-        className={classNames("rounded-full", { "opacity-0": isHome })}
-        src={headshot}
-        alt="Jason K. Frank"
-        width={32}
-        height={32}
-        priority
-      />
+      <NavLink
+        className={classNames({ "opacity-0": isHome })}
+        href="/"
+        key="Avatar"
+      >
+        <Image
+          className="rounded-full"
+          src={headshot}
+          alt="Jason K. Frank"
+          width={32}
+          height={32}
+          priority
+        />
+      </NavLink>
+
       <span className="grid grid-flow-col gap-6">
         <NavLink
           className={classNames({ "opacity-0": isHome })}
-          text="Home"
+          children="Home"
           href="/"
           key="Home"
         />
-        <NavLink text="About" href="/about" key="About" />
+        <NavLink children="About" href="/about" key="About" />
       </span>
     </nav>
   );
