@@ -1,6 +1,7 @@
 import cn from "classnames";
 import "./globals.css";
 import { Poppins } from "@next/font/google";
+import AppBar from "./app-bar/app-bar";
 
 // TODO: Consider finding a variable-weight font so I don't need to specify the weights
 const poppins = Poppins({
@@ -21,12 +22,12 @@ export default function RootLayout({
           also not collapsing any smaller than that row's content (in this case the <main>
           element is that 'auto' row) */}
       <body className="grid h-full grid-rows-[56px_auto_56px]">
-        <nav className="opacity-0">This is a nav</nav>
+        <AppBar />
 
         <main
-          className="prose grid max-w-none place-items-center p-5 pb-12
+          className="prose grid max-w-none place-items-center p-5 pb-24
                    text-gray-900 prose-a:text-blue-600 prose-a:no-underline
-                     md:prose-lg md:p-6 md:pb-12 lg:p-8 lg:pb-12"
+                     md:prose-lg md:p-6 md:pb-24 lg:p-8 lg:pb-24"
         >
           {children}
         </main>

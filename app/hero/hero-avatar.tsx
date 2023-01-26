@@ -14,7 +14,7 @@ function HeroAvatar({
 }) {
   const placeholderElement = (
     // NOTE: Tailwind does not allow us to dynamically construct classnames, so I could NOT
-    //       do: className={`sm:w-[${132}px]`}.  See: https://tailwindcss.com/docs/content-configuration#dynamic-class-names
+    //       do: className={`sm:w-[${size}px]`}.  See: https://tailwindcss.com/docs/content-configuration#dynamic-class-names
     //       Thus, I'm using inline style for that aspect.
     <span
       style={{ width: `${size}px` }}
