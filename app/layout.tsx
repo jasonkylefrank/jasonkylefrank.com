@@ -5,9 +5,14 @@ import AppBar from "./app-bar/app-bar";
 
 // TODO: Consider finding a variable-weight font so I don't need to specify the weights
 const poppins = Poppins({
-  variable: "--font-poppins",
+  variable: "--font-poppins", // This creates a CSS variable. See it in-use in Tailwind.config
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  // I believe this tells the Next font engine to go ahead and swap from the default font
+  //  to our desired custom one, even if it does not load within 100ms.
+  //  See: (1) https://github.com/vercel/next.js/issues/43692#issuecomment-1336436755
+  //       (2) https://nextjs.org/docs/basic-features/font-optimization#choosing-font-display
+  display: "swap",
 });
 
 export default function RootLayout({
