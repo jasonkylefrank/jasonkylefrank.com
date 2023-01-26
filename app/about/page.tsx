@@ -50,16 +50,22 @@ function AboutPage() {
       <div className="my-16 h-5" />
       <h3>About this site</h3>
       <p>
-        This is a brand-new site that I'm building up from scratch. So I don't
+        {`This is a brand-new site that I'm building up from scratch. So I don't
         yet have all of the content that I have planned included here yet. In
         the interest of "progress over perfection", for now here's a little
-        about the site itself.
+        about the site itself.`}
       </p>
       <p>
         {`I'm using Next.js v13 and the new `}
         <code>app</code>
         {` directory approach.  This allows us to create nested layouts
             and more.`}
+      </p>
+      <p>
+        {`Note that the `}
+        <code>app</code>
+        {` directory constructs in Next.js are in Beta, so I'd love to hear from you if 
+          you spot something in this site that doesn't seem to work correctly!`}
       </p>
       <p>{`I'm also trying-out Tailwind.css, including the "Prose" plugin.`}</p>
       <p>{`By the time you read this, I'll hopefully have some page transitions and other animation working via Framer Motion.`}</p>
