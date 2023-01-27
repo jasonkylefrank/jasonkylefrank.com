@@ -1,4 +1,5 @@
 function Webflow() {
+  const webflowEmail = "webflow@jasonkylefrank.com";
   return (
     <div>
       <h2>Hello Webflow!</h2>
@@ -33,7 +34,16 @@ function Webflow() {
         <li>{`DevLink could have a lot of potential!`}</li>
       </ul>
       <div className="h-4" />
-      <p className="italic">{`Please check back in a few days so you can view the video!`}</p>
+
+      <p className="italic">
+        {`Please check back in a few days so you can view the video!
+         `}
+      </p>
+      <p className="italic">
+        {`Better yet, shoot me a quick note at `}
+        <a href={`mailto:${webflowEmail}`}>{webflowEmail}</a>
+        {` and I'll let you know when I have the video ready! 🙌`}
+      </p>
     </div>
   );
 }
