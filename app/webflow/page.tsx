@@ -2,19 +2,30 @@ function Webflow() {
   const webflowEmail = "webflow@jasonkylefrank.com";
   return (
     <div>
-      <h2>Hello Webflow!</h2>
+      <h1>Hello Webflow!</h1>
+
       <p>{`Why am I interested in joining Webflow?`}</p>
+      <p>{`Glad you asked!`}</p>
       <p>
-        {`Glad you asked! I'd like to describe that with a `}
+        {`I'd like to describe that with the following `}
         <strong>short video</strong>
-        {` that I am 
-          planning to create and post here in the coming days.`}
+        {`.  If nothing else, I hope that you're a little entertained by it!`}
       </p>
+
+      <div className="h-[600px] w-full">
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/urmLZp2A03M"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </div>
+      <hr />
       <p>
-        {`However, for now I'll start with just a `}
-        <strong>{`short, text-based version as a placeholder`}</strong>
-        {` just in case you visit this page before I have
-        the video ready. 😃 `}
+        {`Just in case that video is not working where you are, here's a short text-based version to get you started:
+        `}
       </p>
       <ul>
         <li>{`I've seen the design and development landscape evolve significantly over the past 11+ years`}</li>
@@ -32,17 +43,13 @@ function Webflow() {
           {`I love real-time, collaborative apps.  Building them is even more fun!`}
         </li>
         <li>{`DevLink could have a lot of potential!`}</li>
+        <li>{`I want to be part of building something that helps creators bring ideas to life!`}</li>
       </ul>
-      <div className="h-4" />
-
-      <p className="italic">
-        {`Please check back in a few days so you can view the video!
-         `}
-      </p>
-      <p className="italic">
-        {`Better yet, shoot me a quick note at `}
-        <a href={`mailto:${webflowEmail}`}>{webflowEmail}</a>
-        {` and I'll let you know when I have the video ready! 🙌`}
+      <p>{`Let's talk!`}</p>
+      <p>
+        <a className="text-xl" href={`mailto:${webflowEmail}`}>
+          {webflowEmail}
+        </a>
       </p>
     </div>
   );

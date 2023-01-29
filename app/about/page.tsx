@@ -3,7 +3,7 @@ import Link from "next/link";
 function AboutPage() {
   return (
     <div>
-      <h2>Hello again!</h2>
+      <h1>Hello again!</h1>
       <div className="h-5" />
       <p>
         {`I'm a `}
@@ -82,6 +82,7 @@ function AboutPage() {
         (1) Revisit this once I structure the site/page to be able to display media items wider than
             the text content.
         (2) Set the width and height to a 16:9 aspect ratio so the video renders at the correct ratio
+            (also see the video I put on the /webflow page for an example)
       <div className="w-full">
         <iframe
           width="100%"

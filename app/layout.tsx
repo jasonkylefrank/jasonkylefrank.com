@@ -30,9 +30,9 @@ export default function RootLayout({
         <AppBar />
 
         <main
-          className="prose m-6 mt-12 mb-28 grid place-items-center
+          className="prose m-6 mt-20 mb-28 grid place-items-center
                    text-gray-900 prose-a:text-blue-600 prose-a:no-underline
-                     md:m-7 md:mb-32 md:prose-lg lg:m-8 lg:mb-36"
+                     md:m-7 md:mt-24 md:mb-32 md:prose-lg lg:m-8 lg:mt-28 lg:mb-36"
         >
           {children}
         </main>
