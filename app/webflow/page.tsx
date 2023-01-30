@@ -9,14 +9,15 @@ function Webflow() {
       <p>
         {`I'd like to describe that with the following `}
         <strong>short video</strong>
-        {`.  If nothing else, I hope that you're a little entertained by it!`}
+        {/* {`.  If nothing else, I hope that you're a little entertained by it!`} */}
+        {`.  My two sons also chipped-in, so I think you'll at least be entertained by them!`}
       </p>
 
       <div className="h-[600px] w-full">
         <iframe
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/urmLZp2A03M"
+          src="https://www.youtube.com/embed/zsxh1I3UEMw"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
@@ -47,9 +48,7 @@ function Webflow() {
       </ul>
       <p>{`Let's talk!`}</p>
       <p>
-        <a className="text-xl" href={`mailto:${webflowEmail}`}>
-          {webflowEmail}
-        </a>
+        <a href={`mailto:${webflowEmail}`}>{webflowEmail}</a>
       </p>
     </div>
   );
