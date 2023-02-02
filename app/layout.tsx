@@ -23,21 +23,19 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(poppins.className, "h-full")}>
       <head />
-      {/* The 'auto' setting for the middle row allows it to take up all remaining space while
-          also not collapsing any smaller than that row's content (in this case the <main>
-          element is that 'auto' row) */}
-      <body className="grid h-full grid-rows-[56px_auto_56px] justify-items-center">
+      {/* This particular grid-rows (grid-template-rows in CSS) settings allows the middle row to take up all remainging space */}
+      <body className="grid h-full grid-rows-[auto_1fr_auto] justify-items-center">
         <AppBar />
 
         <main
           className="prose m-6 mt-20 mb-28 grid place-items-center
-                   text-gray-900 prose-a:text-blue-600 prose-a:no-underline
-                     md:m-7 md:mt-24 md:mb-32 md:prose-lg lg:m-8 lg:mt-28 lg:mb-36"
+                    text-gray-900 prose-a:text-blue-600
+                     prose-a:no-underline md:m-7 md:mt-24 md:mb-32 md:prose-lg lg:m-8 lg:mt-28 lg:mb-36"
         >
           {children}
         </main>
 
-        <footer className="grid w-screen place-items-center border-t border-black/10 bg-gray-100 px-4 text-xs opacity-70 sm:text-sm">
+        <footer className="grid w-screen place-items-center border-t border-black/10 bg-gray-100 px-4 py-4 text-xs opacity-70 sm:text-sm">
           <p className="text-center">
             Custom-built with
             <svg
