@@ -2,6 +2,7 @@
 
 import classNames from "classnames";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { useSelectedLayoutSegment } from "next/navigation";
 
 function NavLink({
@@ -21,16 +22,22 @@ function NavLink({
     <Link
       className={classNames(
         className,
-        "border-none text-sm hover:bg-transparent",
+        "relative border-none text-sm no-underline hover:bg-transparent",
         {
-          "text-gray-900 underline decoration-gray-900 decoration-2 underline-offset-4":
-            isActive,
-          "text-gray-600 no-underline": !isActive,
+          "text-gray-900": isActive,
+          "text-gray-500": !isActive,
         }
       )}
       href={href}
     >
       {children}
+      {isActive && (
+        <motion.span
+          layoutId="activeNavLink"
+          transition={{ duration: 0.25 }}
+          className="absolute top-full left-0 block h-0.5 w-full bg-gray-900"
+        />
+      )}
     </Link>
   );
 }
