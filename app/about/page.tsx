@@ -3,7 +3,7 @@ import Link from "next/link";
 function AboutPage() {
   return (
     <div>
-      <h1>Hello again!</h1>
+      <h2 className="!mt-0">Hello again!</h2>
       <div className="h-5" />
       <p>
         {`I'm a `}
