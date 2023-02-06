@@ -26,7 +26,7 @@ function AppBar() {
         />
       </NavLink>
 
-      <span className="grid grid-flow-col gap-6">
+      <span className="ml-5 grid grid-flow-col gap-6">
         <NavLink
           className={classNames({ "opacity-0": isHome })}
           children="Home"
@@ -34,6 +34,7 @@ function AppBar() {
           key="Home"
         />
         <NavLink children="About" href="/about" key="About" />
+        <NavLink children="Work" href="/work" key="Work" />
         <NavLink children="Contact" href="/contact" key="Contact" />
       </span>
     </nav>

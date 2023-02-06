@@ -25,9 +25,9 @@ export default function AnimatedMain({
     <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
       <motion.main
         key={pathname}
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }} // <-- Exit animation is not working with Next.js v13 app directory
+        exit={{ opacity: 0, y: 16 }} // <-- Exit animation is not working with Next.js v13 app directory
         transition={{ duration: 0.45 }}
         className="prose m-6 mt-20 mb-28 grid place-items-center
                       text-gray-900 prose-a:text-blue-600
