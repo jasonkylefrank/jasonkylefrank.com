@@ -2,6 +2,7 @@ import cn from "classnames";
 import "./globals.css";
 import { Poppins } from "@next/font/google";
 import AppBar from "./app-bar/app-bar";
+import AnimatedMain from "./animated-main";
 
 // TODO: Consider finding a variable-weight font so I don't need to specify the weights
 const poppins = Poppins({
@@ -27,13 +28,10 @@ export default function RootLayout({
       <body className="grid h-full grid-rows-[auto_1fr_auto] justify-items-center">
         <AppBar />
 
-        <main
-          className="prose m-6 mt-20 mb-28 grid place-items-center
-                    text-gray-900 prose-a:text-blue-600
-                     prose-a:no-underline md:m-7 md:mt-24 md:mb-32 md:prose-lg lg:m-8 lg:mt-28 lg:mb-36"
-        >
-          {children}
-        </main>
+        {/* Note: The children are also wrapped by my `template.tsx` (if present).  See: https://beta.nextjs.org/docs/routing/pages-and-layouts#templates 
+                  That file can be useful for applying page transitions, etc.
+        */}
+        {children}
 
         <footer className="grid w-screen place-items-center border-t border-black/10 bg-gray-100 px-4 py-4 text-xs opacity-70 sm:text-sm">
           <p className="text-center">
@@ -47,7 +45,7 @@ export default function RootLayout({
               <path d="M0 0h24v24H0V0z" fill="none" />
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
-            with Next.js, Tailwind.css, and Vercel
+            with Next.js, Tailwind.css, Framer Motion and Vercel
           </p>
         </footer>
       </body>
