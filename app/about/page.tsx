@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "About",
+  description: "Front-end software engineer & UI/UX designer",
+};
+
 function AboutPage() {
   return (
     <div>

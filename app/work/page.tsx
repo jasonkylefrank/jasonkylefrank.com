@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Work",
+  description: "Work samples",
+};
+
 export default function WorkPage() {
   const email = "Work@jasonkylefrank.com";
   return (
