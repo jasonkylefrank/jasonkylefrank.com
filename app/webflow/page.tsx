@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Webflow",
+  description: "Why I'm a good fit for Webflow Labs",
+};
+
 function Webflow() {
   const webflowEmail = "webflow@jasonkylefrank.com";
   return (

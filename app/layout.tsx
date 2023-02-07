@@ -2,7 +2,6 @@ import cn from "classnames";
 import "./globals.css";
 import { Poppins } from "@next/font/google";
 import AppBar from "./app-bar/app-bar";
-import AnimatedMain from "./animated-main";
 
 // TODO: Consider finding a variable-weight font so I don't need to specify the weights
 const poppins = Poppins({
@@ -15,6 +14,19 @@ const poppins = Poppins({
   //       (2) https://nextjs.org/docs/basic-features/font-optimization#choosing-font-display
   display: "swap",
 });
+
+export const metadata = {
+  title: {
+    default: "Jason K Frank",
+    template: "%s • Jason Frank", // Allows us to create a composite title based on title from nested pages
+  },
+  description: "Front-end software engineer & UI/UX designer",
+  // I think Next.js is now putting this viewport meta tag in automatically, so this property may be redundant
+  viewport: "width=device-width, initial-scale=1",
+  icons: {
+    shortcut: "/favicon.ico",
+  },
+};
 
 export default function RootLayout({
   children,
