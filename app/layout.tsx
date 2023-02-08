@@ -21,8 +21,8 @@ export const metadata = {
     template: "%s • Jason Frank", // Allows us to create a composite title based on title from nested pages
   },
   description: "Front-end software engineer & UI/UX designer",
-  // I think Next.js is now putting this viewport meta tag in automatically, so this property may be redundant
-  viewport: "width=device-width, initial-scale=1",
+  // Next.js is now putting this viewport meta tag in automatically
+  //viewport: "width=device-width, initial-scale=1",
   icons: {
     shortcut: "/favicon.ico",
   },
