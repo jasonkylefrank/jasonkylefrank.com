@@ -1,7 +1,7 @@
 import cn from "classnames";
 import "./globals.css";
 import { Poppins } from "@next/font/google";
-import AppBar from "./app-bar/app-bar";
+import AppBar from "components/app-bar/app-bar";
 
 // TODO: Consider finding a variable-weight font so I don't need to specify the weights
 const poppins = Poppins({
@@ -40,10 +40,16 @@ export default function RootLayout({
       <body className="grid h-full grid-rows-[auto_1fr_auto] justify-items-center">
         <AppBar />
 
-        {/* Note: The children are also wrapped by my `template.tsx` (if present).  See: https://beta.nextjs.org/docs/routing/pages-and-layouts#templates 
-                  That file can be useful for applying page transitions, etc.
-        */}
-        {children}
+        <main
+          className="prose m-6 mt-20 mb-28 grid place-items-center
+          text-gray-900 prose-a:text-blue-600
+          prose-a:no-underline md:m-7 md:mt-24 md:mb-32 md:prose-lg lg:m-8 lg:mt-28 lg:mb-36"
+        >
+          {/* Note: The children are also wrapped by my `template.tsx` (if present at some level).  See: https://beta.nextjs.org/docs/routing/pages-and-layouts#templates 
+                    That file can be useful for applying page transitions, etc.
+          */}
+          {children}
+        </main>
 
         <footer className="grid w-screen place-items-center border-t border-black/10 bg-gray-100 px-4 py-4 text-xs opacity-70 sm:text-sm">
           <p className="text-center">

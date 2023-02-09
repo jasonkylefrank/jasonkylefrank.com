@@ -3,7 +3,7 @@
 import classNames from "classnames";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useSelectedLayoutSegment } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 function NavLink({
   children,
@@ -14,9 +14,9 @@ function NavLink({
   href: string;
   className?: string;
 }) {
-  // Need the nullish coalescing here b/c useSelectedLayoutSegment() returns null if the user is at the root of this layout-level.
-  const currentURLSegment = useSelectedLayoutSegment() ?? "";
-  const isActive = `/${currentURLSegment}` === href;
+  const pathname = usePathname();
+  const isActive = pathname === href;
+  const isOnHomeRoute = pathname === "/";
 
   return (
     <Link
@@ -31,7 +31,7 @@ function NavLink({
       href={href}
     >
       {children}
-      {isActive && (
+      {isActive && !isOnHomeRoute && (
         <motion.span
           layoutId="activeNavLink"
           transition={{ duration: 0.25 }}

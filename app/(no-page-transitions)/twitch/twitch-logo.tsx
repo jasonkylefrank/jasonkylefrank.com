@@ -1,9 +1,10 @@
-export default function TwitchLogo() {
+export default function TwitchLogo({ className }: { className?: string }) {
   return (
     <svg
+      className={className}
+      viewBox="0 0 30 34"
       fill="none"
       //height="53"
-      viewBox="0 0 30 34"
       //width="48"
       xmlns="http://www.w3.org/2000/svg"
     >

@@ -1,4 +1,4 @@
-import TwitchLogo from "./twitch-logo";
+import TwitchOverlay from "./twitch-overlay";
 
 export const metadata = {
   title: "Twitch",
@@ -8,9 +8,11 @@ export const metadata = {
 export default function Twitch() {
   const twitchEmail = "twitch@jasonkylefrank.com";
   return (
-    <div className="bg-[#9147FF]">
-      <TwitchLogo />
+    <div>
+      <TwitchOverlay />
       <h1>Hello Twitch!</h1>
+
+      {/* <audio src="/assets/music/rock-it.mp3" controls></audio> */}
 
       <p>{`Why am I interested in joining Twitch?`}</p>
       <p>{`Glad you asked!`}</p>
