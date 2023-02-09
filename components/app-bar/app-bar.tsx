@@ -47,10 +47,18 @@ export default function AppBar() {
       </HomeNavLink>
 
       <span className="ml-5 grid grid-flow-col gap-6">
-        <HomeNavLink children="Home" key="Home" isOnHomeRoute={isOnHomeRoute} />
-        <NavLink children="About" href="/about" key="About" />
-        <NavLink children="Work" href="/work" key="Work" />
-        <NavLink children="Contact" href="/contact" key="Contact" />
+        <HomeNavLink key="Home" isOnHomeRoute={isOnHomeRoute}>
+          Home
+        </HomeNavLink>
+        <NavLink href="/about" key="About">
+          About
+        </NavLink>
+        <NavLink href="/work" key="Work">
+          Work
+        </NavLink>
+        <NavLink href="/contact" key="Contact">
+          Contact
+        </NavLink>
       </span>
     </nav>
   );
