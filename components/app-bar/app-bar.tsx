@@ -8,11 +8,11 @@ import { ReactNode } from "react";
 
 function HomeNavLink({
   children,
-  key,
+  id,
   isOnHomeRoute,
 }: {
   children: React.ReactNode;
-  key: string;
+  id: string;
   isOnHomeRoute: boolean;
 }) {
   return (
@@ -22,7 +22,7 @@ function HomeNavLink({
         "transition duration-500"
       )}
       href="/"
-      key={key}
+      key={id}
     >
       {children}
     </NavLink>
@@ -35,7 +35,7 @@ export default function AppBar() {
 
   return (
     <nav className="not-prose grid w-screen grid-flow-col items-center justify-between justify-items-center py-3 px-8">
-      <HomeNavLink key="Avatar" isOnHomeRoute={isOnHomeRoute}>
+      <HomeNavLink id="Avatar" isOnHomeRoute={isOnHomeRoute}>
         <Image
           className="rounded-full"
           src={headshot}
@@ -47,7 +47,7 @@ export default function AppBar() {
       </HomeNavLink>
 
       <span className="ml-5 grid grid-flow-col gap-6">
-        <HomeNavLink key="Home" isOnHomeRoute={isOnHomeRoute}>
+        <HomeNavLink id="Home" isOnHomeRoute={isOnHomeRoute}>
           Home
         </HomeNavLink>
         <NavLink href="/about" key="About">
