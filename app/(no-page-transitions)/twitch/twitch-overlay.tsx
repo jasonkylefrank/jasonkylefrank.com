@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import TwitchLogo from "./twitch-logo";
 import Avatar from "./avatar";
 import PlusIcon from "./plus-icon";
+import { useMediaQuery } from "lib/useMediaQuery";
 
 //#region --- Framer Motion Variants ---
 interface TwitchOverlayVariants extends Variants {
@@ -47,8 +48,11 @@ const purpleScrimVariants: TwitchOverlayVariants = {
 const pairConstants = {
   outOfViewY: "-60vh",
   startingXPercent: 50, // To make them horizontally centered since they are currently not absolutely positioned and thus are positioned next to each other
-  // The horizontal distance (in pixels) to travel from center into the "pairRevealed" state
-  pairRevealedXShift: 240,
+  pairRevealedXShift: {
+    // The horizontal distance (in pixels) to travel from center into the "pairRevealed" state
+    largeScreen: 240,
+    smallScreen: 180,
+  },
 };
 
 const twitchLogoVariants: TwitchOverlayVariants = {
@@ -68,7 +72,7 @@ const twitchLogoVariants: TwitchOverlayVariants = {
     },
   },
   pairRevealed: {
-    x: -pairConstants.pairRevealedXShift,
+    x: -pairConstants.pairRevealedXShift.largeScreen,
   },
   allAscended: {},
 };
@@ -82,7 +86,7 @@ const avatarVariants: TwitchOverlayVariants = {
   twitchLogoRevealed: {},
   pairRevealed: {
     opacity: 1,
-    x: pairConstants.pairRevealedXShift,
+    x: pairConstants.pairRevealedXShift.largeScreen,
   },
   allAscended: {},
 };
@@ -99,7 +103,7 @@ const plusIconVariants: TwitchOverlayVariants = {
   allAscended: {},
 };
 
-(function setUpVariants() {
+function setUpVariants() {
   const variants = [
     wrapperVariants,
     purpleScrimVariants,
@@ -107,6 +111,7 @@ const plusIconVariants: TwitchOverlayVariants = {
     avatarVariants,
     plusIconVariants,
   ];
+  // Set up common timing properties so that variants for each element run in-sync
   variants.forEach((variant) => {
     variant.pairRevealed.transition = {
       delay: 0.8,
@@ -119,11 +124,26 @@ const plusIconVariants: TwitchOverlayVariants = {
       duration: 0.34,
     };
   });
-})();
+}
+setUpVariants();
+
+function updateVariantsForScreenSize(isSmallScreen: boolean) {
+  let xValue;
+
+  if (isSmallScreen) {
+    xValue = pairConstants.pairRevealedXShift.smallScreen;
+  } else {
+    xValue = pairConstants.pairRevealedXShift.largeScreen;
+  }
+  twitchLogoVariants.pairRevealed.x = -xValue;
+  avatarVariants.pairRevealed.x = xValue;
+}
+
 //#endregion --- end Framer Motion Variants ---
 
 export default function TwitchOverlay() {
   const animationControls = useAnimationControls();
+  const isSmallScreen = useMediaQuery("(max-width: 640px)");
 
   async function runAnimationStates() {
     animationControls.set("allHidden");
@@ -136,6 +156,7 @@ export default function TwitchOverlay() {
   }
 
   useEffect(() => {
+    updateVariantsForScreenSize(isSmallScreen);
     runAnimationStates();
   }, []);
 
