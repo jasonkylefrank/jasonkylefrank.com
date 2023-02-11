@@ -47,7 +47,13 @@ const purpleScrimVariants: TwitchOverlayVariants = {
 // Constants for the main "pair" of elements: the Twitch logo and my avatar
 const pairConstants = {
   outOfViewY: "-60vh",
-  startingXPercent: 50, // To make them horizontally centered since they are currently not absolutely positioned and thus are positioned next to each other
+  getStartingX: (nagative: boolean) => {
+    const plusIconHalfWidth = "24px"; // Half the width of the plus icon that appears between the logo and avatar
+    // We have to use this weird syntax for creating a negative value via the calc() function.  See: https://stackoverflow.com/a/25205523/718325
+    return nagative
+      ? `calc(-1 * 50% - ${plusIconHalfWidth})`
+      : `calc(50% + ${plusIconHalfWidth})`;
+  },
   pairRevealedXShift: {
     // The horizontal distance (in pixels) to travel from center into the "pairRevealed" state
     largeScreen: 240,
@@ -58,7 +64,7 @@ const pairConstants = {
 const twitchLogoVariants: TwitchOverlayVariants = {
   allHidden: {
     y: pairConstants.outOfViewY,
-    x: `${-pairConstants.startingXPercent}%`, // This one needs to be negative
+    x: pairConstants.getStartingX(true),
     opacity: 1,
   },
   scrimVisible: {},
@@ -80,7 +86,7 @@ const twitchLogoVariants: TwitchOverlayVariants = {
 const avatarVariants: TwitchOverlayVariants = {
   allHidden: {
     opacity: 0,
-    x: `${pairConstants.startingXPercent}%`, // positive percentage for this one
+    x: pairConstants.getStartingX(false),
   },
   scrimVisible: {},
   twitchLogoRevealed: {},
@@ -151,7 +157,7 @@ export default function TwitchOverlay() {
     await animationControls.start("twitchLogoRevealed");
     // Delay happens here (currently defined in the variants or the setup function)
     await animationControls.start("pairRevealed");
-    // Delay happens here
+    // Delay happens here too
     await animationControls.start("allAscended");
   }
 
