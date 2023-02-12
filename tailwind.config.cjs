@@ -19,6 +19,13 @@ module.exports = {
       maxWidth: {
         "8xl": "88rem", // 1408px with a 16px base
       },
+      // typography: {
+      //   DEFAULT: {
+      //     css: {
+      //       h3: "margin-top: 2em", // default is 1.6666em
+      //     },
+      //   },
+      // },
     },
   },
   plugins: [require("@tailwindcss/typography")],

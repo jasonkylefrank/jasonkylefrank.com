@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-  }
   a {
     /* NOTE: There are currently some duplicate anchor styles applied to the <main> element in app/layout.tsx 
        (I had to put those there since that's where I applied the 'prose' classes and those classes have built-in
@@ -20,9 +18,5 @@
       hover:border-opacity-80
       hover:bg-blue-600
       hover:bg-opacity-10;
-  }
-
-  p {
-    /* @apply lg:text-sm; */
   }
 }

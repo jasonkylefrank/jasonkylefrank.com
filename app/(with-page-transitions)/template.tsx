@@ -3,11 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-export default function AnimatedMain({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Template({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   return (
@@ -23,18 +19,16 @@ export default function AnimatedMain({
     //  in Next.js v13).  Hopefully they'll fix that soon (not sure if it is an issue with Next.js v13 or
     //  Framer Motion though).
     <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
-      <motion.main
+      <motion.div
         key={pathname}
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 16 }} // <-- Exit animation is not working with Next.js v13 app directory
         transition={{ duration: 0.45 }}
-        className="prose m-6 mt-20 mb-28 grid place-items-center
-                      text-gray-900 prose-a:text-blue-600
-                      prose-a:no-underline md:m-7 md:mt-24 md:mb-32 md:prose-lg lg:m-8 lg:mt-28 lg:mb-36"
+        className="grid place-items-center"
       >
         {children}
-      </motion.main>
+      </motion.div>
     </AnimatePresence>
   );
 }
