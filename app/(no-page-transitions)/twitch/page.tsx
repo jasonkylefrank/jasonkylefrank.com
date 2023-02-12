@@ -10,7 +10,8 @@ export const metadata = {
 
 export default function Twitch() {
   const [animationCount, setAnimationCount] = useState(0);
-
+  const animationOverlayGitHubURL =
+    "https://github.com/jasonkylefrank/jasonkylefrank.com/blob/main/app/(no-page-transitions)/twitch/twitch-overlay.tsx";
   const twitchEmail = "twitch@jasonkylefrank.com";
 
   function handleRestartIntroAnimationClick(
@@ -27,19 +28,20 @@ export default function Twitch() {
       <h1>Hello Twitch!</h1>
 
       {/* <audio src="/assets/music/rock-it.mp3" controls></audio> */}
+      <section className="mt-20 mb-20">
+        <p>
+          {`If you're viewing this page, then you're probably wondering if I'd be a good fit for the `}
+          <strong>design technologist role</strong> {` at Twitch.`}
+        </p>
 
-      <p>
-        {`If you're viewing this page, then you're probably wondering if I'd be a good fit for the `}
-        <strong>design technologist role</strong> {` at Twitch.`}
-      </p>
+        <p>{`On this page, I'll describe the following reasons why I would be a good fit:`}</p>
 
-      <p>{`On this page, I'll describe the following reasons why I would be a good fit:`}</p>
-
-      <ol>
-        <li>{`I am equal parts software engineer and UI/UX designer`}</li>
-        <li>{`I love prototyping`}</li>
-        <li>{`I understand video creators`}</li>
-      </ol>
+        <ol>
+          <li>{`I am equal parts software engineer and UI/UX designer`}</li>
+          <li>{`I love prototyping`}</li>
+          <li>{`I understand video creators`}</li>
+        </ol>
+      </section>
 
       <h3>{`I am equal parts software engineer and UI/UX designer`}</h3>
 
@@ -65,11 +67,13 @@ export default function Twitch() {
         loaded this webpage (it only lasts about 2 seconds)?  That's an example of something that
         I saw in my "mind's eye" and drove me to learn new aspects of Framer Motion so that I could 
         implement it.  (Note: you can view the source code of that component on GitHub `}
-        <a>here</a>
+        <a href={animationOverlayGitHubURL} target="_blank">
+          here
+        </a>
         {`).`}
       </p>
       <p>
-        {`Just for fun, you click `}
+        {`Just for fun, you should click `}
         <a
           className="cursor-pointer"
           onClick={handleRestartIntroAnimationClick}
@@ -122,18 +126,21 @@ export default function Twitch() {
         ></iframe>
       </div>
 
-      <p>
-        {`Speaking of my 2 sons, my older son now wants to start his own video channel (possibly on 
-        YouTube and/or Twitch).
-        `}
-      </p>
-      <p>
-        {`And that brings me to the "personal connection" to video creators.  I want to help design 
-        and build the future for him as a video creator/streamer.  I want him to have a platform that 
-        is safe, engaging, and fun.  I think that designing and building features for Twitch and 
-        Interactive Video Service (IVS) will allow me to do that.
-        `}
-      </p>
+      <section className="!mt-20">
+        <h3>{`The apple doesn't fall far from the tree`}</h3>
+        <p>
+          {`Speaking of my 2 sons, my older son now wants to start his own video channel (possibly on 
+          YouTube and/or Twitch).
+          `}
+        </p>
+        <p>
+          {`And that brings me to the "personal connection" to video creators.  I want to help design 
+          and build the future for him as a video creator/streamer.  I want him to have a platform that 
+          is safe, engaging, and fun.  I think that designing and building features for Twitch and 
+          Interactive Video Service (IVS) will allow me to do that.
+          `}
+        </p>
+      </section>
 
       <h3>Putting it all together</h3>
 
