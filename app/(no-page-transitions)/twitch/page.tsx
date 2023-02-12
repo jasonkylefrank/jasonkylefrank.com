@@ -23,7 +23,7 @@ export default function Twitch() {
 
   return (
     <div>
-      {/* <TwitchOverlay animationCount={animationCount} /> */}
+      <TwitchOverlay animationCount={animationCount} />
 
       <h1>Hello Twitch!</h1>
 
