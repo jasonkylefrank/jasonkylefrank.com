@@ -73,7 +73,7 @@ export default function Twitch() {
         {`).`}
       </p>
       <p>
-        {`Just for fun, you click `}
+        {`Just for fun, you should click `}
         <a
           className="cursor-pointer"
           onClick={handleRestartIntroAnimationClick}
