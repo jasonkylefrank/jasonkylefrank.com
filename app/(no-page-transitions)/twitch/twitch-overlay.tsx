@@ -22,7 +22,7 @@ interface TwitchOverlayVariants extends Variants {
 }
 
 const wrapperVariants: TwitchOverlayVariants = {
-  allHidden: {},
+  allHidden: { y: "0vh" },
   scrimVisible: {},
   twitchLogoRevealed: {},
   pairRevealed: {},
@@ -147,7 +147,11 @@ function updateVariantsForScreenSize(isSmallScreen: boolean) {
 
 //#endregion --- end Framer Motion Variants ---
 
-export default function TwitchOverlay() {
+export default function TwitchOverlay({
+  animationCount,
+}: {
+  animationCount: number;
+}) {
   const animationControls = useAnimationControls();
   const isSmallScreen = useMediaQuery("(max-width: 640px)");
 
@@ -164,7 +168,7 @@ export default function TwitchOverlay() {
   useEffect(() => {
     updateVariantsForScreenSize(isSmallScreen);
     runAnimationStates();
-  }, []);
+  }, [animationCount]);
 
   return (
     <motion.div
