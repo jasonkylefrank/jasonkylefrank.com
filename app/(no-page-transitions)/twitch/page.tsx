@@ -67,7 +67,7 @@ export default function Twitch() {
         loaded this webpage (it only lasts about 2 seconds)?  That's an example of something that
         I saw in my "mind's eye" and drove me to learn new aspects of Framer Motion so that I could 
         implement it.  (Note: you can view the source code of that component on GitHub `}
-        <a href={animationOverlayGitHubURL} target="_blank">
+        <a href={animationOverlayGitHubURL} target="_blank" rel="noreferrer">
           here
         </a>
         {`).`}
