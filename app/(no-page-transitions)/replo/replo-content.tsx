@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import addToCartInteractionPic from "public/assets/replo/add-to-cart-interaction.png";
 import oneOnOneEmailFromYuxin from "public/assets/replo/1-on-1-email.png";
 import IntroAnimationOverlay from "./replo-overlay";
@@ -274,6 +275,10 @@ export default function ReploContent() {
         <p>{`Let's talk!`}</p>
         <p>
           <a href={`mailto:${companyEmail}`}>{companyEmail}</a>
+        </p>
+        <p>
+          {`Also see my `}
+          <Link href="resume--replo-engineer.pdf">resume</Link>
         </p>
       </section>
 
