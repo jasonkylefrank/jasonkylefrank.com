@@ -278,7 +278,7 @@ export default function ReploContent() {
       </section>
 
       <div className="mt-28 mb-12 flex items-center justify-center gap-12">
-        <ReploLogo className={`${logoSizeClasses} fill-gray-700`} />
+        <ReploLogo className={`${logoSizeClasses} !fill-gray-700`} />
         <PlusIcon className="h-12 w-12 fill-black opacity-30" />
         <Avatar className={`${logoSizeClasses} rounded-xl`} />
       </div>
