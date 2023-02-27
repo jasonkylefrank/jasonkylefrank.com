@@ -33,8 +33,8 @@ function AboutPage() {
 
       <ul>
         <li>
-          My <Link href="resume-2022.pdf">resume</Link>
-          <span className="text-gray-400"> (updated 12/2022)</span>
+          My <Link href="resume-01-2023.pdf">resume</Link>
+          <span className="text-gray-400"> (updated 01/2023)</span>
         </li>
         <li>
           Professional skills{" "}
