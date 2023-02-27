@@ -62,21 +62,35 @@ function AboutPage() {
         about the site itself.`}
       </p>
       <p>
-        {`I'm using Next.js v13 and the new `}
+        {`I'm using `}
+        <strong>Next.js v13</strong>
+        {` and the new `}
         <code>app</code>
-        {` directory approach.  This allows us to create nested layouts
+        {` directory paradigm.  This allows us to create nested layouts
             and more.`}
       </p>
       <p>
-        {`Note that the `}
+        {`Note that, as of this writing, the `}
         <code>app</code>
         {` directory constructs in Next.js are in Beta, so I'd love to hear from you if 
           you spot something in this site that doesn't seem to work correctly!`}
       </p>
-      <p>{`I'm also trying-out Tailwind.css, including the "Prose" plugin.`}</p>
-      <p>{`By the time you read this, I'll hopefully have some page transitions and other animation working via Framer Motion.`}</p>
       <p>
-        {`For hosting, I'm trying-out Vercel. I've previously hosted sites on Firebase hosting and Netlify.
+        {`I'm also using `}
+        <strong>Tailwind.css</strong>
+        {`, including the "Prose" plugin.`}
+      </p>
+
+      <p>
+        {`For certain animations, I'm using `}
+        <strong>Framer Motion</strong>
+        {`.  Examples include page transitions, 
+          current-nav-link underline animation, and a few "intro animations" for a couple secret pages.`}
+      </p>
+      <p>
+        {`For hosting, I'm using `}
+        <strong>Vercel</strong>
+        {`. I've previously hosted sites on Firebase hosting and Netlify.
           So far Vercel has worked amazingly well.  For example, it automatically creates preview deployments
           for any of my branches on GitHub.`}
       </p>
