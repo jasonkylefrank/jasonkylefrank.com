@@ -39,6 +39,11 @@ module.exports = {
           },
         },
       },
+      boxShadow: {
+        // 30 percent black
+        jason30:
+          "rgb(0 0 0 / 30%) 0px 4px 15px -3px, rgb(0 0 0 / 30%) 0px 3px 6px -4px",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
