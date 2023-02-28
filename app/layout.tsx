@@ -2,6 +2,7 @@ import cn from "classnames";
 import "./globals.css";
 import { Poppins } from "@next/font/google";
 import AppBar from "components/app-bar/app-bar";
+import AnalyticsWrapper from "components/analytics";
 
 // TODO: Consider finding a variable-weight font so I don't need to specify the weights
 const poppins = Poppins({
@@ -66,6 +67,8 @@ export default function RootLayout({
             with Next.js, Tailwind.css, Framer Motion and Vercel
           </p>
         </footer>
+
+        <AnalyticsWrapper />
       </body>
     </html>
   );
