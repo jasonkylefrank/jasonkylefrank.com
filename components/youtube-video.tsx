@@ -1,10 +1,17 @@
 import classNames from "classnames";
 
+export enum YouTubeSources {
+  NextGenEntrep_Ep1 = "https://www.youtube.com/embed/cl827pK-0oU",
+  NextGenEntrep_Ep2 = "https://www.youtube.com/embed/gIE4lB2TPvc",
+}
+
+type YouTubeSourceType = YouTubeSources | string;
+
 export default function YouTubeVideo({
   src,
   className,
 }: {
-  src: string;
+  src: YouTubeSourceType;
   className?: string;
 }) {
   return (

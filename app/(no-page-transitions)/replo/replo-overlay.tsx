@@ -8,8 +8,8 @@ import {
 } from "framer-motion";
 import { useEffect } from "react";
 import ReploLogo from "./replo-logo";
-import Avatar from "./avatar";
-import PlusIcon from "./plus-icon";
+import Avatar from "../../../components/avatar";
+import PlusIcon from "../../../components/icons/plus-icon";
 import { useMediaQuery } from "lib/useMediaQuery";
 
 //#region --- Framer Motion Variants ---

@@ -6,9 +6,11 @@ import Link from "next/link";
 import addToCartInteractionPic from "public/assets/replo/add-to-cart-interaction.png";
 import oneOnOneEmailFromYuxin from "public/assets/replo/1-on-1-email.png";
 import IntroAnimationOverlay from "./replo-overlay";
-import YouTubeVideo from "./youtube-video";
-import Avatar from "./avatar";
-import PlusIcon from "./plus-icon";
+import YouTubeVideo, {
+  YouTubeSources,
+} from "../../../components/youtube-video";
+import Avatar from "../../../components/avatar";
+import PlusIcon from "../../../components/icons/plus-icon";
 import ReploLogo from "./replo-logo";
 
 export default function ReploContent() {
@@ -166,13 +168,8 @@ export default function ReploContent() {
           `}
       </p>
 
-      {/* Episode 1: */}
-      <YouTubeVideo src="https://www.youtube.com/embed/cl827pK-0oU" />
-      {/* Episode 2: */}
-      <YouTubeVideo
-        className="mt-16"
-        src="https://www.youtube.com/embed/gIE4lB2TPvc"
-      />
+      <YouTubeVideo src={YouTubeSources.NextGenEntrep_Ep1} />
+      <YouTubeVideo className="mt-16" src={YouTubeSources.NextGenEntrep_Ep2} />
 
       <section className="!mt-24">
         <h3>{`You have ingredients for success (but even more with me!)`}</h3>
