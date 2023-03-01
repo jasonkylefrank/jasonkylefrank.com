@@ -10,7 +10,7 @@ import YouTubeVideo, {
   YouTubeSources,
 } from "../../../components/youtube-video";
 import Avatar from "../../../components/avatar";
-import PlusIcon from "../../../components/icons/plus-icon";
+import PlusGlyph from "../../../components/icon-glyphs/plus-glyph";
 import ReploLogo from "./replo-logo";
 
 export default function ReploContent() {
@@ -281,7 +281,7 @@ export default function ReploContent() {
 
       <div className="mt-28 mb-12 flex items-center justify-center gap-12">
         <ReploLogo className={`${logoSizeClasses} !fill-gray-700`} />
-        <PlusIcon className="h-12 w-12 fill-black opacity-30" />
+        <PlusGlyph className="h-12 w-12 fill-black opacity-30" />
         <Avatar className={`${logoSizeClasses} rounded-xl`} />
       </div>
     </div>

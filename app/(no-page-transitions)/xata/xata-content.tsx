@@ -8,8 +8,9 @@ import YouTubeVideo, {
   YouTubeSources,
 } from "../../../components/youtube-video";
 import Avatar from "../../../components/avatar";
-import PlusIcon from "../../../components/icons/plus-icon";
+import PlusGlyph from "../../../components/icon-glyphs/plus-glyph";
 import CompanyLogo from "./xata-logo";
+import XataGame from "./xata-game/xata-game";
 
 export default function ReploContent() {
   const [animationCount, setAnimationCount] = useState(0);
@@ -56,20 +57,7 @@ export default function ReploContent() {
            Xata Workers so I can implement this.  Check back soon or email me to get notified when I have it ready: `}
           <a href={`mailto:${companyEmail}`}>{companyEmail}</a>
         </p>
-        <section>
-          <div>upward arrow</div>
-          {/* <div className="grid grid-cols-3"> */}
-          <div className="grid grid-cols-[auto_1fr_auto]">
-            <span>leftward arrow</span>
-            <span className="relative h-72 w-96 rounded-lg bg-gray-800 text-white">
-              <span className="absolute top-[calc(50%-24px)] left-[calc(50%-24px)]">
-                <CompanyLogo className="h-[40px]" wingsFill="#bbbbbb" />
-              </span>
-            </span>
-            <span>rightward arrow</span>
-          </div>
-          <div>downward arrow</div>
-        </section>
+        <XataGame />
       </section>
 
       <section>
@@ -149,7 +137,7 @@ export default function ReploContent() {
 
       <div className="mt-28 mb-12 flex items-center justify-center gap-12">
         <CompanyLogo className={`${logoSizeClasses}`} wingsFill="#444444" />
-        <PlusIcon className="h-12 w-12 fill-black opacity-30" />
+        <PlusGlyph className="h-12 w-12 fill-black opacity-30" />
         <Avatar className={`${logoSizeClasses} rounded-full`} />
       </div>
     </div>
