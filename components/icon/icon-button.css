@@ -1,6 +1,10 @@
-/* Using a CSS file to apply these Tailwind classes because this approach allows other components
-   to override these utility classes (whereas applying them directly to the HTML does not allow
-   overriding unless the overriding classes happen to be defined later in the Tailwind's source).
+/* NOTE: 
+  (1) Using a CSS file to apply these Tailwind classes because this approach allows other components
+      to override these utility classes (whereas applying them directly to the HTML does not allow
+      overriding unless the overriding classes happen to be defined later in the Tailwind's source).
+  (2) I had to use a regular CSS file (not a bla.module.css file) because using the module CSS 
+      approach does not work with the `group-hover:` classes.  That's why I made the class name
+      more-verbose (using BEM), since I think this class will have global scope.
  */
 .iconButton__hoverElement {
   @apply absolute top-1 left-1 right-1 bottom-1 scale-50 rounded-full bg-current opacity-0 
