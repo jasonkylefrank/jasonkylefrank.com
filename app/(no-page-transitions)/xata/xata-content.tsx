@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
-// import IntroAnimationOverlay from "./xata-overlay";
+import IntroAnimationOverlay from "./xata-overlay";
 import YouTubeVideo, {
   YouTubeSources,
 } from "../../../components/youtube-video";
@@ -30,7 +29,7 @@ export default function ReploContent() {
 
   return (
     <div>
-      {/* <IntroAnimationOverlay animationCount={animationCount} /> */}
+      <IntroAnimationOverlay animationCount={animationCount} />
 
       <h1>
         <span className="mr-2">👋🏼</span> Hello {companyDisplayName}!
@@ -250,9 +249,30 @@ export default function ReploContent() {
           {`Also see my `}
           <Link href="resume--xata-engineer.pdf">resume</Link>
         </p>
+        <hr />
+        <p>
+          {`P.S.   By the way, did you notice the intro animation sequence when you first 
+        loaded this webpage (it only lasts about 2 seconds)?  That's an example of something that
+        I saw in my "mind's eye" and drove me to learn new aspects of Framer Motion so that I could 
+        implement it.  (Note: you can view the source code of that component on GitHub `}
+          <a href={animationOverlayGitHubURL} target="_blank" rel="noreferrer">
+            here
+          </a>
+          {`).`}
+        </p>
+        <p>
+          {`Just for fun, you should click `}
+          <a
+            className="cursor-pointer"
+            onClick={handleRestartIntroAnimationClick}
+          >
+            here
+          </a>{" "}
+          {` to see that animation again!`}
+        </p>
       </section>
 
-      <div className="mt-28 mb-12 flex items-center justify-center gap-12">
+      <div className="mt-32 mb-12 flex items-center justify-center gap-12">
         <CompanyLogo className={`${logoSizeClasses}`} wingsFill="#444444" />
         <PlusGlyph className="h-12 w-12 fill-black opacity-30" />
         <Avatar className={`${logoSizeClasses} rounded-full`} />
