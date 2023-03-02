@@ -1,5 +1,6 @@
 import cn from "classnames";
 import Icon from "./icon";
+import "./icon-button.css";
 
 export default function IconButton({
   children,
@@ -31,7 +32,8 @@ export default function IconButton({
       {/* Hover-effect element */}
       <span
         className={cn(
-          `absolute top-1 left-1 right-1 bottom-1 scale-50 rounded-full bg-current opacity-0 ${transitionDurationClass} group-hover:scale-100 group-hover:opacity-[13%]`,
+          "iconButton__hoverElement",
+          transitionDurationClass,
           hoverElementClassName
         )}
       />

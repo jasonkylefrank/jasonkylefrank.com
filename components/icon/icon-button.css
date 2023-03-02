@@ -1,0 +1,8 @@
+/* Using a CSS file to apply these Tailwind classes because this approach allows other components
+   to override these utility classes (whereas applying them directly to the HTML does not allow
+   overriding unless the overriding classes happen to be defined later in the Tailwind's source).
+ */
+.iconButton__hoverElement {
+  @apply absolute top-1 left-1 right-1 bottom-1 scale-50 rounded-full bg-current opacity-0 
+    group-hover:scale-100 group-hover:opacity-[13%];
+}

@@ -10,7 +10,7 @@ import styles from "./xata-game.module.css";
 export default function XataGame() {
   const iconButtonHoverElementClassNameProp = {
     hoverElementClassName:
-      "!rounded-lg !top-0 !bottom-0 !left-0 !right-0 scale-75",
+      "rounded-lg top-0 bottom-0 left-0 right-0 scale-75 group-hover:opacity-10",
   };
 
   return (
@@ -23,7 +23,6 @@ export default function XataGame() {
         <ExpandLessGlyph />
       </IconButton>
 
-      {/* <div className="grid grid-cols-[auto_1fr_auto] place-items-center justify-self-stretch"> */}
       <IconButton
         className={styles.leftArrow}
         {...iconButtonHoverElementClassNameProp}

@@ -1,3 +1,4 @@
+/* I'm using a CSS file in this case because grid-template-areas don't seem to be easy with Tailwind utility classes currently */
 .root {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -8,7 +9,7 @@
     "bottomLeft  bottomCenter  bottomRight";
 }
 .root > * {
-  margin: 2px;
+  margin: 4px;
 }
 
 .upArrow {
