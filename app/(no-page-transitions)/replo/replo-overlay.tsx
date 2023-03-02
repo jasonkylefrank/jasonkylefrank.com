@@ -8,8 +8,8 @@ import {
 } from "framer-motion";
 import { useEffect } from "react";
 import ReploLogo from "./replo-logo";
-import Avatar from "./avatar";
-import PlusIcon from "./plus-icon";
+import Avatar from "../../../components/avatar";
+import PlusGlyph from "../../../components/icon-glyphs/plus-glyph";
 import { useMediaQuery } from "lib/useMediaQuery";
 
 //#region --- Framer Motion Variants ---
@@ -193,7 +193,7 @@ export default function IntroAnimationOverlay({
             variants={plusIconVariants}
             className="inline-block opacity-0"
           >
-            <PlusIcon className="h-12 w-12 fill-white opacity-70" />
+            <PlusGlyph className="h-12 w-12 fill-white opacity-70" />
           </motion.span>
           <motion.span
             variants={companyLogoVariants}

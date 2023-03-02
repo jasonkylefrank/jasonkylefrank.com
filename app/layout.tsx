@@ -38,7 +38,10 @@ export default function RootLayout({
     <html lang="en" className={cn(poppins.className, "h-full")}>
       <head />
       {/* This particular grid-rows (grid-template-rows in CSS) settings allows the middle row to take up all remainging space */}
-      <body className="grid h-full grid-rows-[auto_1fr_auto] justify-items-center">
+      <body
+        className="grid h-full grid-rows-[auto_1fr_auto] justify-items-center 
+                 selection:bg-[#08eeb2] selection:text-black"
+      >
         <AppBar />
 
         <main

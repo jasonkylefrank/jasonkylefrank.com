@@ -1,11 +1,9 @@
-export default function PlusIcon({ className }: { className?: string }) {
+export default function PlusGlyph({ className }: { className?: string }) {
   return (
     <svg
       className={className}
-      // width="48"
-      // height="48"
+      fill="currentColor"
       viewBox="0 0 48 48"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g>

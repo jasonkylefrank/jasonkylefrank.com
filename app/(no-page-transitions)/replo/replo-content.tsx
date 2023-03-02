@@ -6,9 +6,11 @@ import Link from "next/link";
 import addToCartInteractionPic from "public/assets/replo/add-to-cart-interaction.png";
 import oneOnOneEmailFromYuxin from "public/assets/replo/1-on-1-email.png";
 import IntroAnimationOverlay from "./replo-overlay";
-import YouTubeVideo from "./youtube-video";
-import Avatar from "./avatar";
-import PlusIcon from "./plus-icon";
+import YouTubeVideo, {
+  YouTubeSources,
+} from "../../../components/youtube-video";
+import Avatar from "../../../components/avatar";
+import PlusGlyph from "../../../components/icon-glyphs/plus-glyph";
 import ReploLogo from "./replo-logo";
 
 export default function ReploContent() {
@@ -166,13 +168,8 @@ export default function ReploContent() {
           `}
       </p>
 
-      {/* Episode 1: */}
-      <YouTubeVideo src="https://www.youtube.com/embed/cl827pK-0oU" />
-      {/* Episode 2: */}
-      <YouTubeVideo
-        className="mt-16"
-        src="https://www.youtube.com/embed/gIE4lB2TPvc"
-      />
+      <YouTubeVideo src={YouTubeSources.NextGenEntrep_Ep1} />
+      <YouTubeVideo className="mt-16" src={YouTubeSources.NextGenEntrep_Ep2} />
 
       <section className="!mt-24">
         <h3>{`You have ingredients for success (but even more with me!)`}</h3>
@@ -284,7 +281,7 @@ export default function ReploContent() {
 
       <div className="mt-28 mb-12 flex items-center justify-center gap-12">
         <ReploLogo className={`${logoSizeClasses} !fill-gray-700`} />
-        <PlusIcon className="h-12 w-12 fill-black opacity-30" />
+        <PlusGlyph className="h-12 w-12 fill-black opacity-30" />
         <Avatar className={`${logoSizeClasses} rounded-xl`} />
       </div>
     </div>
