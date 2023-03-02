@@ -40,7 +40,8 @@ export default function ReploContent() {
       <section className="mt-20 mb-20">
         <p>
           {`If you're viewing this page, then you're probably wondering if I'd be a `}
-          <strong>good fit as an engineer</strong> {` at ${companyDisplayName}`}
+          <strong>good fit as an engineer</strong>{" "}
+          {` at ${companyDisplayName}.`}
         </p>
         <p>
           {`I'd love to speak with you soon to discuss this.  But for now, I'll briefly 
@@ -52,7 +53,7 @@ export default function ReploContent() {
           <li>What do I bring to the table?</li>
         </ol>
         <p>
-          {`Finally, I'll wrap-up this page with a fun demo that tests-out `}
+          {`Finally, I'll wrap-up this page with a fun experiment that tests-out `}
           <strong>Xata edge functions</strong> (workers).
         </p>
       </section>
@@ -156,7 +157,7 @@ export default function ReploContent() {
               {`.  Although I don't yet have direct experience with Chakra (which I see you're using on `}
               <code className="font-normal">app.xata.io</code>
               {`), I do have experience with other component/CSS 
-            libraries like MUI (Material UI), Styled Components, and SASS, which should give me a good base to 
+            libraries like MUI (Material UI), Styled Components, and SASS.  Those should give me a good base to 
             quickly learn Chakra.
             `}
             </p>
@@ -247,7 +248,7 @@ export default function ReploContent() {
         </p>
         <p>
           {`Also see my `}
-          <Link href="resume--TODO.pdf">resume (TODO)</Link>
+          <Link href="resume--xata-engineer.pdf">resume</Link>
         </p>
       </section>
 
