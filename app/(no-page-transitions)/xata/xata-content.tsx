@@ -224,10 +224,16 @@ export default function XataContent() {
           <a href={`mailto:${companyEmail}`}>{companyEmail}</a>
         </p>
 
-        <iframe
-          className="h-[440px] w-[960px] max-w-3xl"
-          src="https://xata-game.jasonkylefrank.com/raw"
-        ></iframe>
+        {/* NOTE: Make sure NOT to set a width (even via CSS) directly on the iframe since it does not
+                  seem to automatically size-down when the window gets narrow, which screws up all kinds of
+                  things on the page! */}
+        <div className="h-[440px]">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://xata-game.jasonkylefrank.com/raw"
+          ></iframe>
+        </div>
       </section>
 
       <section className="!mt-28">
