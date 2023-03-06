@@ -9,9 +9,8 @@ import YouTubeVideo, {
 import Avatar from "../../../components/avatar";
 import PlusGlyph from "../../../components/icon-glyphs/plus-glyph";
 import CompanyLogo from "./xata-logo";
-import XataGame from "./xata-game/xata-game";
 
-export default function ReploContent() {
+export default function XataContent() {
   const [animationCount, setAnimationCount] = useState(0);
   const companyDisplayName = "Xata";
   const companyName = "xata";
@@ -224,7 +223,11 @@ export default function ReploContent() {
           {`  Check back soon or email me to get notified when I have it ready: `}
           <a href={`mailto:${companyEmail}`}>{companyEmail}</a>
         </p>
-        <XataGame />
+
+        <iframe
+          className="h-[440px] w-[960px] max-w-3xl"
+          src="https://xata-game.jasonkylefrank.com/raw"
+        ></iframe>
       </section>
 
       <section className="!mt-28">
