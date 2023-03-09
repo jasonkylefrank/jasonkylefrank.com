@@ -218,9 +218,10 @@ export default function XataContent() {
           `}
         </p>
 
-        <h4>{`NOTE: This experiment is coming soon... `}</h4>
+        <h4>{`NOTE: This experiment is still in progress... `}</h4>
         <p>
-          {`  Check back soon or email me to get notified when I have it ready: `}
+          {`As of March 9th, 2023, the basics of the experiment are working.
+            Check back soon or email me to get notified when I have more of it in-place: `}
           <a href={`mailto:${companyEmail}`}>{companyEmail}</a>
         </p>
 
