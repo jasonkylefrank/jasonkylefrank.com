@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Anchor } from "ui";
 import addToCartInteractionPic from "public/assets/replo/add-to-cart-interaction.png";
 import oneOnOneEmailFromYuxin from "public/assets/replo/1-on-1-email.png";
 import IntroAnimationOverlay from "./replo-overlay";
@@ -16,7 +17,7 @@ import ReploLogo from "./replo-logo";
 export default function ReploContent() {
   const [animationCount, setAnimationCount] = useState(0);
   const companyName = "replo";
-  const animationOverlayGitHubURL = `https://github.com/jasonkylefrank/jasonkylefrank.com/blob/main/app/(no-page-transitions)/${companyName}/${companyName}-overlay.tsx`;
+  const animationOverlayGitHubPermalink = `https://github.com/jasonkylefrank/jasonkylefrank.com/blob/71188050957fe293bb6ef644c0e6dc736724042e/apps/web/app/(no-page-transitions)/replo/replo-overlay.tsx`;
   const companyEmail = `${companyName}@jasonkylefrank.com`;
 
   function handleRestartIntroAnimationClick(
@@ -36,7 +37,6 @@ export default function ReploContent() {
         <span className="mr-2">👋🏼</span> Hello Replo!
       </h1>
 
-      {/* <audio src="/assets/music/rock-it.mp3" controls></audio> */}
       <section className="mt-20 mb-20">
         <p>
           {`If you're viewing this page, then you're probably wondering if I'd be a `}
@@ -130,19 +130,16 @@ export default function ReploContent() {
         loaded this webpage (it only lasts about 2 seconds)?  That's an example of something that
         I saw in my "mind's eye" and drove me to learn new aspects of Framer Motion so that I could 
         implement it.  (Note: you can view the source code of that component on GitHub `}
-        <a href={animationOverlayGitHubURL} target="_blank" rel="noreferrer">
+        <Anchor type="external" href={animationOverlayGitHubPermalink}>
           here
-        </a>
+        </Anchor>
         {`).`}
       </p>
       <p>
         {`Just for fun, you should click `}
-        <a
-          className="cursor-pointer"
-          onClick={handleRestartIntroAnimationClick}
-        >
+        <Anchor type="internal" onClick={handleRestartIntroAnimationClick}>
           here
-        </a>{" "}
+        </Anchor>
         {` to see that animation again!`}
       </p>
 
@@ -271,11 +268,13 @@ export default function ReploContent() {
 
         <p>{`Let's talk!`}</p>
         <p>
-          <a href={`mailto:${companyEmail}`}>{companyEmail}</a>
+          <Anchor type="mailto" href={companyEmail} />
         </p>
         <p>
           {`Also see my `}
-          <Link href="resume--replo-engineer.pdf">resume</Link>
+          <Anchor type="external" href="resume--replo-engineer.pdf">
+            resume
+          </Anchor>
         </p>
       </section>
 
