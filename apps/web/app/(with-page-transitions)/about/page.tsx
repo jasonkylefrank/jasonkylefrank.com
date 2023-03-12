@@ -56,7 +56,7 @@ function AboutPage() {
       <div className="my-16 h-6" />
       <h3>About this site</h3>
       <p>
-        {`This is a brand-new site that I'm building up from scratch. So I don't
+        {`I'm building this site up from scratch. So I don't
         yet have all of the content that I have planned included here yet. In
         the interest of "progress over perfection", for now here's a little
         about the site itself.`}
@@ -94,6 +94,22 @@ function AboutPage() {
           So far Vercel has worked amazingly well.  For example, it automatically creates preview deployments
           for any of my branches on GitHub.`}
       </p>
+      <p>
+        {`After building-up the initial site, I started to build other applications that I wanted to showcase 
+          on the main site (either embedded directly in the main site or deployed to a subdomain of it).  These 
+          other applications have their own dependencies which I did not want to add to the main website.  
+          Additionally, I wanted these other applications to have a shared look-and-feel as my main website.  
+          These requirements led me to restructure my repository into a `}
+        <strong>monorepo</strong>
+        {`, powered by `} <strong>Turborepo</strong>
+        {`.  You can read more about that architecture in my 
+          top-level `}{" "}
+        <a href="https://github.com/jasonkylefrank/jasonkylefrank.com/">
+          Readme file
+        </a>
+        {`.`}
+      </p>
+
       <p>{"Check back soon to see this site (and this page) grow!"}</p>
 
       {/* 
