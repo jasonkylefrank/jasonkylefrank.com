@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Anchor } from "ui";
 
 export const metadata = {
   title: "About",
@@ -33,7 +33,10 @@ function AboutPage() {
 
       <ul>
         <li>
-          My <Link href="resume-01-2023.pdf">resume</Link>
+          {`My `}
+          <Anchor type="external" href="resume-01-2023.pdf">
+            resume
+          </Anchor>
           <span className="text-gray-400"> (updated 01/2023)</span>
         </li>
         <li>
@@ -104,9 +107,12 @@ function AboutPage() {
         {`, powered by `} <strong>Turborepo</strong>
         {`.  You can read more about that architecture in my 
           top-level `}{" "}
-        <a href="https://github.com/jasonkylefrank/jasonkylefrank.com/">
-          Readme file
-        </a>
+        <Anchor
+          type="external"
+          href="https://github.com/jasonkylefrank/jasonkylefrank.com/"
+        >
+          readme file
+        </Anchor>
         {`.`}
       </p>
 

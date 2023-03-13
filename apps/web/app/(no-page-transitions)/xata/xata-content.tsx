@@ -9,12 +9,14 @@ import YouTubeVideo, {
 import Avatar from "../../../components/avatar";
 import PlusGlyph from "../../../components/icon-glyphs/plus-glyph";
 import CompanyLogo from "./xata-logo";
+import { Anchor } from "ui";
 
 export default function XataContent() {
   const [animationCount, setAnimationCount] = useState(0);
   const companyDisplayName = "Xata";
   const companyName = "xata";
-  const animationOverlayGitHubURL = `https://github.com/jasonkylefrank/jasonkylefrank.com/blob/main/app/(no-page-transitions)/${companyName}/${companyName}-overlay.tsx`;
+  const animationOverlayGitHubPermalink =
+    "https://github.com/jasonkylefrank/jasonkylefrank.com/blob/71188050957fe293bb6ef644c0e6dc736724042e/apps/web/app/(no-page-transitions)/xata/xata-overlay.tsx";
   const companyEmail = `${companyName}@jasonkylefrank.com`;
 
   function handleRestartIntroAnimationClick(
@@ -222,7 +224,7 @@ export default function XataContent() {
         <p>
           {`As of March 9th, 2023, the basics of the experiment are working.
             Check back soon or email me to get notified when I have more of it in-place: `}
-          <a href={`mailto:${companyEmail}`}>{companyEmail}</a>
+          <Anchor type="mailto" href={companyEmail} />
         </p>
 
         {/* NOTE: Make sure NOT to set a width (even via CSS) directly on the iframe since it does not
@@ -253,11 +255,13 @@ export default function XataContent() {
         </p>
         <p>{`Let's talk!`}</p>
         <p>
-          <a href={`mailto:${companyEmail}`}>{companyEmail}</a>
+          <Anchor type="mailto" href={companyEmail} />
         </p>
         <p>
           {`Also see my `}
-          <Link href="resume--xata-engineer.pdf">resume</Link>
+          <Anchor type="external" href="resume--xata-engineer.pdf">
+            resume
+          </Anchor>
         </p>
         <hr />
         <p>
@@ -265,19 +269,16 @@ export default function XataContent() {
         loaded this webpage (it only lasts about 2 seconds)?  That's an example of something that
         I saw in my "mind's eye" and drove me to learn new aspects of Framer Motion so that I could 
         implement it.  (Note: you can view the source code of that component on GitHub `}
-          <a href={animationOverlayGitHubURL} target="_blank" rel="noreferrer">
+          <Anchor type="external" href={animationOverlayGitHubPermalink}>
             here
-          </a>
+          </Anchor>
           {`).`}
         </p>
         <p>
           {`Just for fun, you should click `}
-          <a
-            className="cursor-pointer"
-            onClick={handleRestartIntroAnimationClick}
-          >
+          <Anchor type="internal" onClick={handleRestartIntroAnimationClick}>
             here
-          </a>{" "}
+          </Anchor>
           {` to see that animation again!`}
         </p>
       </section>
