@@ -7,11 +7,12 @@ interface CommonAnchorProps {
 }
 
 /**
- * Will open the user's default email app to send an email. Note that the "children" prop will be ignored
- * for this case since the "href" prop will be used for both the children and the href of the anchor.
+ * Will open the user's default email app to send an email.
  */
 interface MailToAnchorProps {
   type: "mailto";
+  // Note that the "children" prop will be ignored for this case since the "href" prop
+  //  will be used for both the children and the href of the anchor.
   href: string;
 }
 /**
@@ -25,6 +26,9 @@ interface ExternalAnchorProps {
 
 interface InternalAnchorProps {
   type: "internal";
+  // Optional because sometimes we just use an onClick instead of an href for this type of anchor
+  href?: string;
+  children: React.ReactNode;
 }
 
 type AnchorProps =
@@ -43,10 +47,6 @@ type AnchorProps =
 export const Anchor: FC<AnchorProps> = (props) => {
   let constructedProps;
   const { type, className, href, children, ...others } = props;
-
-  // TODO: Determine if I need to add TailwindCSS as a dependency to this project since I'm using a Tailwind class here
-  //        (if the consuming project has Tailwind as a dependency then that would work for that use-case but maybe I shouldn't
-  //         rely on that).
 
   // The "cursor: pointer" style is needed for "internal links" which don't specify an href since the browser won't use a pointer cursor in that case.
   const classNameProp = { className: classNames("cursor-pointer", className) };
