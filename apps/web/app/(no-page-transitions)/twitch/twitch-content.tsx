@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import TwitchOverlay from "./twitch-overlay";
+import { Anchor } from "ui";
 
 export default function TwitchContent() {
   const [animationCount, setAnimationCount] = useState(0);
-  const animationOverlayGitHubURL =
-    "https://github.com/jasonkylefrank/jasonkylefrank.com/blob/main/app/(no-page-transitions)/twitch/twitch-overlay.tsx";
-  const twitchEmail = "twitch@jasonkylefrank.com";
+  const animationOverlayGitHubPermalink =
+    "https://github.com/jasonkylefrank/jasonkylefrank.com/blob/71188050957fe293bb6ef644c0e6dc736724042e/apps/web/app/(no-page-transitions)/twitch/twitch-overlay.tsx";
+  const companyEmail = "twitch@jasonkylefrank.com";
 
   function handleRestartIntroAnimationClick(
     e: React.MouseEvent<HTMLAnchorElement>
@@ -62,19 +63,16 @@ export default function TwitchContent() {
         loaded this webpage (it only lasts about 2 seconds)?  That's an example of something that
         I saw in my "mind's eye" and drove me to learn new aspects of Framer Motion so that I could 
         implement it.  (Note: you can view the source code of that component on GitHub `}
-        <a href={animationOverlayGitHubURL} target="_blank" rel="noreferrer">
+        <Anchor type="external" href={animationOverlayGitHubPermalink}>
           here
-        </a>
+        </Anchor>
         {`).`}
       </p>
       <p>
         {`Just for fun, you should click `}
-        <a
-          className="cursor-pointer"
-          onClick={handleRestartIntroAnimationClick}
-        >
+        <Anchor type="internal" onClick={handleRestartIntroAnimationClick}>
           here
-        </a>{" "}
+        </Anchor>
         {` to see that animation again!`}
       </p>
 
@@ -165,9 +163,7 @@ export default function TwitchContent() {
       </p>
 
       <p>{`Let's talk!`}</p>
-      <p>
-        <a href={`mailto:${twitchEmail}`}>{twitchEmail}</a>
-      </p>
+      <Anchor type="mailto" href={companyEmail} />
     </div>
   );
 }

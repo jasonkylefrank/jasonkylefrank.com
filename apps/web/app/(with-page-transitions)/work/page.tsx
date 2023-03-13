@@ -1,3 +1,5 @@
+import { Anchor } from "ui";
+
 export const metadata = {
   title: "Work",
   description: "Work samples",
@@ -17,7 +19,7 @@ export default function WorkPage() {
         </p>
         <p>
           {"Ping me at: "}
-          <a href={`mailto:${email}`}>{email}</a>
+          <Anchor type="mailto" href={email} />
         </p>
       </div>
     </section>

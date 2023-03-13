@@ -1,10 +1,12 @@
+import { Anchor } from "ui";
+
 export const metadata = {
   title: "Webflow",
   description: "Why I'm a good fit for Webflow Labs",
 };
 
 function Webflow() {
-  const webflowEmail = "webflow@jasonkylefrank.com";
+  const companyEmail = "webflow@jasonkylefrank.com";
   return (
     <div>
       <h1>Hello Webflow!</h1>
@@ -53,7 +55,7 @@ function Webflow() {
       </ul>
       <p>{`Let's talk!`}</p>
       <p>
-        <a href={`mailto:${webflowEmail}`}>{webflowEmail}</a>
+        <Anchor type="mailto" href={companyEmail} />
       </p>
     </div>
   );
