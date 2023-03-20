@@ -4,8 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Anchor } from "ui";
-import addToCartInteractionPic from "public/assets/replo/add-to-cart-interaction.png";
-import oneOnOneEmailFromYuxin from "public/assets/replo/1-on-1-email.png";
+import addToCartInteractionPic from "/public/assets/replo/add-to-cart-interaction.png";
+import oneOnOneEmailFromYuxin from "/public/assets/replo/1-on-1-email.png";
 import IntroAnimationOverlay from "./replo-overlay";
 import YouTubeVideo, {
   YouTubeSources,
@@ -246,7 +246,7 @@ export default function ReploContent() {
         </p>
 
         <Image
-          className="max-h-92 ml-auto mr-auto w-auto rounded-md shadow-jason30"
+          className="ml-auto mr-auto max-h-96 w-auto rounded-md shadow-jason30"
           src={oneOnOneEmailFromYuxin}
           alt="One-on-one email invite screenshot"
         />
