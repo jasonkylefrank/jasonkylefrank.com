@@ -20,11 +20,10 @@
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "noEmit": true,
     "module": "esnext",
     "resolveJsonModule": true,
     "jsx": "preserve",
-    "incremental": true
+    "noEmit": true
   },
   "exclude": ["node_modules"]
 }

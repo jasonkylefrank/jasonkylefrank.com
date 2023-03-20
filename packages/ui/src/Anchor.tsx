@@ -48,8 +48,10 @@ export const Anchor: FC<AnchorProps> = (props) => {
   let constructedProps;
   const { type, className, href, children, ...others } = props;
 
-  // The "cursor: pointer" style is needed for "internal links" which don't specify an href since the browser won't use a pointer cursor in that case.
-  const classNameProp = { className: classNames("cursor-pointer", className) };
+  // The "cursor: pointer" style is needed for "internal links" which don't specify an href since the browser won't automatically use a pointer cursor in that case.
+  const classNameProp = {
+    className: classNames("ui-cursor-pointer", className),
+  };
 
   switch (type) {
     case "mailto":
