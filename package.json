@@ -2,11 +2,9 @@
   "name": "jasonkylefrank.com",
   "version": "0.1.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
+    "//preinstall": "This script should prevent devs from accidentally installing dependencies with anything other than pnpm (e.g., not allowing npm) since that's what this monorepo is using.",
+    "preinstall": "npx only-allow pnpm",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -15,7 +13,7 @@
   },
   "devDependencies": {
     "eslint": "^8.36.0",
-    "eslint-config-custom": "*",
+    "eslint-config-custom": "workspace:*",
     "prettier": "latest",
     "prettier-plugin-tailwindcss": "^0.2.4",
     "turbo": "latest"
@@ -23,5 +21,5 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "packageManager": "npm@9.2.0"
+  "packageManager": "pnpm@7.29.1"
 }
