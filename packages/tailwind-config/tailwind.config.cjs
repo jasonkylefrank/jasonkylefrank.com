@@ -5,8 +5,10 @@ module.exports = {
   // The paths to all files that contain Tailwind class names
   content: [
     `src/**/*.{js,ts,jsx,tsx}`,
-    // Include packages if not transpiling. I think that transpiling is specified in the next.config file in the consuming project (check for a transpilePackages key)
-    // "../../packages/**/*.{js,ts,jsx,tsx}",
+    // Include packages if not compiling locally in each package (and instead compiling in the consuming projects).
+    // For Next.js projects, we can tell Next.js to compile external packages in the next.config file in the consuming project (check for a transpilePackages key)
+    // Note that this path should be generic enough to work in any of the consuming projects (i.e., it should probably first reference upwards direction until it hits the root, then back down)
+    "../../packages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
