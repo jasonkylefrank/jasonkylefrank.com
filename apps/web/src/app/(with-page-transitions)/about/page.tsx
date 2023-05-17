@@ -27,6 +27,7 @@ function AboutPage() {
       </p>
       <div className="h-5" />
       <p>
+        {" "}
         {`On this page, I'll expand on this question of who I am by describing /
         providing things like: `}
       </p>

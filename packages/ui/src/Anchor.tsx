@@ -2,7 +2,11 @@ import type { FC } from "react";
 import classNames from "classnames";
 
 interface CommonAnchorProps {
-  className?: string;
+  /** CSS class name for styling the cursor */
+  cursorClass?: string;
+  /** CSS class name for styling the border of the anchor (usually just a bottom border to serve as the "underline") */
+  borderClass?: string;
+  fontWeightClass?: string;
   [propName: string]: any; // (Optional) Type for an "others" prop (so we can spread any other props like an onClick onto the anchor). See: https://stackoverflow.com/a/58201122/718325
 }
 
@@ -44,13 +48,24 @@ type AnchorProps =
  *
  * Note that for anchors that go to a different route within the website, Next.js's Link component should probably be used.
  */
-export const Anchor: FC<AnchorProps> = (props) => {
+const Anchor: FC<AnchorProps> = ({
+  type,
+  cursorClass,
+  borderClass,
+  fontWeightClass,
+  href,
+  children,
+  ...others
+}) => {
   let constructedProps;
-  const { type, className, href, children, ...others } = props;
 
-  // The "cursor: pointer" style is needed for "internal links" which don't specify an href since the browser won't automatically use a pointer cursor in that case.
   const classNameProp = {
-    className: classNames("ui-cursor-pointer", className),
+    // Note: Several styles for the <a> element are currently being applied via global styles and/or style in a layout file in consuming projects.
+    className: classNames(
+      cursorClass ?? "cursor-pointer", // needed for "internal links" which don't specify an href since the browser won't automatically use a pointer cursor in that case.
+      borderClass,
+      fontWeightClass
+    ),
   };
 
   switch (type) {
@@ -77,3 +92,5 @@ export const Anchor: FC<AnchorProps> = (props) => {
 
   return <a {...constructedProps} {...classNameProp} {...others} />;
 };
+
+export default Anchor;

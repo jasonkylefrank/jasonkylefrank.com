@@ -1,7 +1,5 @@
 import cn from "classnames";
 import "./globals.css";
-// include styles from the ui package
-import "ui/styles.css";
 
 import { Poppins } from "@next/font/google";
 import AppBar from "components/app-bar/app-bar";
