@@ -9,7 +9,7 @@ import {
 import { useEffect } from "react";
 import TwitchLogo from "./twitch-logo";
 import Avatar from "../../../components/avatar";
-import PlusGlyph from "../../../components/icon-glyphs/plus-glyph";
+import { PlusGlyph } from "ui";
 import { useMediaQuery } from "lib/useMediaQuery";
 
 //#region --- Framer Motion Variants ---

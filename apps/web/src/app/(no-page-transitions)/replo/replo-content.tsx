@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Anchor } from "ui";
+import { Anchor, PlusGlyph } from "ui";
 import addToCartInteractionPic from "/public/assets/replo/add-to-cart-interaction.png";
 import oneOnOneEmailFromYuxin from "/public/assets/replo/1-on-1-email.png";
 import IntroAnimationOverlay from "./replo-overlay";
@@ -11,7 +11,6 @@ import YouTubeVideo, {
   YouTubeSources,
 } from "../../../components/youtube-video";
 import Avatar from "../../../components/avatar";
-import PlusGlyph from "../../../components/icon-glyphs/plus-glyph";
 import ReploLogo from "./replo-logo";
 
 export default function ReploContent() {

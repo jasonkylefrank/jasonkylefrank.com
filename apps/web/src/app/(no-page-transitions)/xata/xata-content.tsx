@@ -7,9 +7,8 @@ import YouTubeVideo, {
   YouTubeSources,
 } from "../../../components/youtube-video";
 import Avatar from "../../../components/avatar";
-import PlusGlyph from "../../../components/icon-glyphs/plus-glyph";
 import CompanyLogo from "./xata-logo";
-import { Anchor } from "ui";
+import { Anchor, PlusGlyph } from "ui";
 
 export default function XataContent() {
   const [animationCount, setAnimationCount] = useState(0);
