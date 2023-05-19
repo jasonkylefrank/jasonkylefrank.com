@@ -12,6 +12,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@playwright/test": "^1.33.0",
     "eslint": "^8.36.0",
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",
