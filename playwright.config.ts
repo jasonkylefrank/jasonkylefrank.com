@@ -10,7 +10,8 @@ import { defineConfig, devices } from "@playwright/test";
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: "./e2e",
+  testDir: "./apps/",
+  testMatch: /.*\.e2e\.tsx?/,
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -30,21 +31,33 @@ export default defineConfig({
     trace: "on-first-retry",
   },
 
-  /* Configure projects for major browsers */
   projects: [
     {
-      name: "chromium",
+      name: "All apps - Chrome",
+      // expect: {
+      //   timeout: DEFAULT_EXPECT_TIMEOUT,
+      // },
       use: { ...devices["Desktop Chrome"] },
+      /** If navigation takes more than this, then something's wrong, let's fail fast. */
+      //navigationTimeout: DEFAULT_NAVIGATION_TIMEOUT,
     },
 
     {
-      name: "firefox",
+      name: "All apps - Firefox",
       use: { ...devices["Desktop Firefox"] },
     },
 
     {
-      name: "webkit",
+      name: "All apps - Webkit",
       use: { ...devices["Desktop Safari"] },
+    },
+
+    {
+      name: "Main website - Chrome",
+      testDir: "./apps/web/",
+      use: {
+        ...devices["Desktop Chrome"],
+      },
     },
 
     /* Test against mobile viewports. */
@@ -69,9 +82,10 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://127.0.0.1:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
+  webServer: {
+    command: "turbo dev",
+    // url: "http://127.0.0.1:3000",
+    url: "http://localhost:3000/", // It seems this must be http (not https) to work
+    reuseExistingServer: !process.env.CI,
+  },
 });
