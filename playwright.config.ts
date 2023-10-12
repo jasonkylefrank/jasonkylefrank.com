@@ -37,7 +37,10 @@ export default defineConfig({
       // expect: {
       //   timeout: DEFAULT_EXPECT_TIMEOUT,
       // },
-      use: { ...devices["Desktop Chrome"] },
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { height: 980, width: 1280 },
+      },
       /** If navigation takes more than this, then something's wrong, let's fail fast. */
       //navigationTimeout: DEFAULT_NAVIGATION_TIMEOUT,
     },

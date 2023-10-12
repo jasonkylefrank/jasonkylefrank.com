@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import PlaywrightTestContent from "./playwright-test-content";
 
 export const metadata = {
   title: "Playwright test!",
@@ -6,7 +7,7 @@ export const metadata = {
 
 interface pageProps {}
 
-const page: FC<pageProps> = ({}) => {
-  return <h2>Hello from the Playwright test page!</h2>;
+const PlaywrightTest: FC<pageProps> = ({}) => {
+  return <PlaywrightTestContent />;
 };
-export default page;
+export default PlaywrightTest;
