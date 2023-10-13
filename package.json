@@ -1,5 +1,6 @@
 {
   "name": "jasonkylefrank.com",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +13,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@playwright/test": "^1.38.1",
+    "@types/node": "18.11.17",
     "eslint": "^8.36.0",
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",

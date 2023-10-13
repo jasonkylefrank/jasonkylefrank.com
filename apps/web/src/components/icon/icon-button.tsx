@@ -11,6 +11,8 @@ export default function IconButton({
 }: {
   children: React.ReactNode;
   className?: string;
+  /** Whether or not this component should wrap the `children` in an Icon (which sets a standard size and applies
+   *  visual states).  Defaults to `true` */
   useIcon?: boolean;
   hoverElementClassName?: string;
   [propName: string]: any; // Type for the ...others prop. See: https://stackoverflow.com/a/58201122/718325
