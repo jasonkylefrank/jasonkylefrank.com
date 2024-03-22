@@ -230,11 +230,11 @@ export default function XataContent() {
         {/* NOTE: Make sure NOT to set a width (even via CSS) directly on the iframe since it does not
                   seem to automatically size-down when the window gets narrow, which screws up all kinds of
                   things on the page! */}
-        <div className="h-[440px]">
+        <div className="h-[720px] mt-14 lg:mx-[-60px] md:mx-[-24px]">
           <iframe
             width="100%"
             height="100%"
-            src="https://xata-game.jasonkylefrank.com/raw"
+            src="https://edge-function-game.jasonkylefrank.com/raw"
           ></iframe>
         </div>
       </section>
