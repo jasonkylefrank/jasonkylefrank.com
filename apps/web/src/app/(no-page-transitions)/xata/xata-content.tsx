@@ -9,6 +9,7 @@ import YouTubeVideo, {
 import Avatar from "../../../components/avatar";
 import PlusGlyph from "../../../components/icon-glyphs/plus-glyph";
 import CompanyLogo from "./xata-logo";
+import GameTokenForDescription from "./game-token-for-description";
 import { Anchor } from "ui";
 
 export default function XataContent() {
@@ -205,36 +206,75 @@ export default function XataContent() {
       </section>
 
       <section className="!mt-28">
-        <h2>{`Xata workers experiment: "Free the butterfly!"`}</h2>
+        <div className="mb-14 -mt-5">
+          <h2>{`Edge function game: "Heal the broken heart!"`}</h2>
+        </div>
 
-        <p>{`The Xata butterfly is trapped and needs your help!`}</p>
+        <aside className="bg-gray-200 italic rounded py-3 px-4 opacity-70">
+          {`NOTE: I originally implemented this experiment using `}
+          <strong>{`Xata workers`}</strong>
+          {`.  However, Xata decided to stop supporting those.  So I have since converted this game over to `}
+          <strong>{`Vercel's Edge Functions.`}</strong>
+        </aside>
+
         <p>
-          {`She was flying around the internet and got caught between Vercel's edge functions and Xata's new 
-          (edge) worker functions.`}
+          {`Web developer hearts broke when they saw problems with serverless functions: `}
+          <strong>{`cold starts`}</strong>
+          {` and `} <strong>{`network latency`}</strong>{" "}
+          {` caused by their functions being deployed to a single region. 😞`}
         </p>
+
+        <p>{`But alas, edge functions were created to (hopefully) save the day!`}</p>
+
         <p>
-          {`You can free her by moving her one step at a time.  With each move, a call to either Xata's or Vercel's edge 
-          functions will be made to test-out the latency of these services and move her toward the exit.  You'll be able 
-          to visually see the difference between a “local move” (immediate) and the move that comes back from the edge 
-          function.  Hopefully the difference is pretty small!            
+          {`Edge functions run on an `}
+          <em>{`edge network`}</em>
+          {`, which is a bit like a CDN for serverless functions 
+      (except the runtime is more limited so you can't just deploy `}
+          <em>{`any`}</em>
+          {` serverless function to the edge).`}
+        </p>
+
+        <p>{`Let's test-out the latency and cold-start aspect of an edge network function and get this heart healed!  Heal the heart by moving it out
+           of the game board one step at a time.`}</p>
+        <p>
+          {`With each move, this app will simultenously execute 2 types of moves:`}
+        </p>
+        <ol>
+          <li>
+            {`A "local move" heart `}
+            <GameTokenForDescription tokenType="local" />
+            {` that moves immediately (with a paper-trail effect).`}
+          </li>
+          <li>
+            {`A round-trip network-move heart `}
+            <GameTokenForDescription tokenType="network" />
+            {` that moves once its network call returns.`}
+            <div className="text-black/40">{`  I also added an animation to this move so you can more-easily see it "flow onto" the spot of the local-move heart.`}</div>
+          </li>
+        </ol>
+
+        <p>
+          {`You'll be able to visually see the difference between these two types.  Hopefully the edge function proves more responsive than the serverless function!            
+          `}
+        </p>
+        <p className="text-sm italic text-black/40">
+          {`DEVELOPER TIP: Open up the console to see some valuable info printed as you make moves or change network settings.
           `}
         </p>
 
-        <h4>{`NOTE: This experiment is still in progress... `}</h4>
-        <p>
-          {`As of March 9th, 2023, the basics of the experiment are working.
-            Check back soon or email me to get notified when I have more of it in-place: `}
-          <Anchor type="mailto" href={companyEmail} />
-        </p>
+        <span className="not-prose">
+          <hr className="my-10" />
+        </span>
 
         {/* NOTE: Make sure NOT to set a width (even via CSS) directly on the iframe since it does not
                   seem to automatically size-down when the window gets narrow, which screws up all kinds of
                   things on the page! */}
-        <div className="h-[440px]">
+        <div className="h-[720px] mt-12 lg:mx-[-60px] md:mx-[-24px]">
           <iframe
             width="100%"
             height="100%"
-            src="https://xata-game.jasonkylefrank.com/raw"
+            src="https://edge-function-game.jasonkylefrank.com/raw"
           ></iframe>
         </div>
       </section>
