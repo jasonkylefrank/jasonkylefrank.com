@@ -9,6 +9,7 @@ module.exports = {
     // For Next.js projects, we can tell Next.js to compile external packages in the next.config file in the consuming project (check for a transpilePackages key)
     // Note that this path should be generic enough to work in any of the consuming projects (i.e., it should probably first reference upwards direction until it hits the root, then back down)
     "../../packages/**/*.{js,ts,jsx,tsx}",
+    "!../../**/node_modules/**", // Exclude all node_modules directories (the `!` prefix indicates to exclude)
   ],
   theme: {
     extend: {
